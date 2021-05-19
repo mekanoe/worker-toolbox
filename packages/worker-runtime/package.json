@@ -1,0 +1,13 @@
+{
+  "name": "@worker-toolbox/runtime",
+  "version": "0.0.1",
+  "dependencies": {
+    "@worker-toolbox/kv": "*",
+    "@worker-toolbox/context": "*",
+    "@worker-toolbox/express-worker-handler": "*"
+  },
+  "devDependencies": {
+    "get-port": "^5.1.1",
+    "axios": "^0.21.1"
+  }
+}

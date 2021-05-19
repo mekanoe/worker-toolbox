@@ -1,6 +1,6 @@
 //@ts-ignore
 import level from "level-mem";
-import { KVDataLayer } from "./dataLayer";
+import { KVDataLayer } from "./KVDataLayer";
 import { StoredRecord } from "./types";
 
 const recordFixture: StoredRecord = {

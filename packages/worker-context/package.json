@@ -1,0 +1,7 @@
+{
+  "name": "@worker-toolbox/context",
+  "version": "0.0.1",
+  "dependencies": {
+    "@peculiar/webcrypto": "^1.1.7"
+  }
+}

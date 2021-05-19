@@ -6,7 +6,7 @@
   ],
   "private": true,
   "scripts": {
-    "test": "yarn workspaces run jest"
+    "test": "jest"
   },
   "devDependencies": {
     "typescript": "^4.2.4",

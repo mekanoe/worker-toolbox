@@ -1,4 +1,4 @@
-import { KVNamespace } from "./namespace";
+import { KVNamespace } from "./KVNamespace";
 
 const getSecondsSinceEpoch = () => Math.floor(Date.now() / 100);
 
