@@ -110,7 +110,7 @@ export class WorkerRuntimeServer {
       return;
     }
 
-    WorkerResponse.canConstruct = true;
+    // WorkerResponse.canConstruct = true;
     const event = new ExpressEvent(request, response);
     try {
       await this.handler(event);
@@ -119,6 +119,6 @@ export class WorkerRuntimeServer {
       response.statusCode = 500;
       response.end("Worker errored, see server logs.");
     }
-    WorkerResponse.canConstruct = false;
+    // WorkerResponse.canConstruct = false;
   };
 }
