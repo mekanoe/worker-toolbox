@@ -6,7 +6,6 @@ import {
   createWorkerContext,
   FetchHandler,
 } from "../../worker-context/src/Context";
-import { WorkerResponse } from "../../worker-context/src/WorkerResponse";
 
 export type Options = {
   /**
