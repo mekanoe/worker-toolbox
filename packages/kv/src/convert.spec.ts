@@ -1,4 +1,4 @@
-import { convertRecord, convertToStorable } from "./convert";
+import { convertRecord } from "./convert";
 
 it("converts text record to string", () => {
   expect(convertRecord("hello world!", "text")).toBe("hello world!");

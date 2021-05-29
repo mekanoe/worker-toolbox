@@ -1,7 +1,7 @@
-import { WorkerRuntimeServer } from "./server";
-import getPort from "get-port";
 import axios from "axios";
+import getPort from "get-port";
 import { KVNamespace } from "../../kv/src/KVNamespace";
+import { WorkerRuntimeServer } from "./server";
 
 it("starts a server and processes a worker request", async () => {
   const port = await getPort();

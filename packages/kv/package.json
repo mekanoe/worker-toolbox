@@ -8,8 +8,8 @@
     "@cloudflare/workers-types": "^2.2.2",
     "@types/jest": "^26.0.23",
     "@types/levelup": "^4.3.1",
-    "levelup": "^5.0.0",
     "level-mem": "^5.0.1",
+    "levelup": "^5.0.0",
     "ts-jest": "^26.5.6"
   }
 }

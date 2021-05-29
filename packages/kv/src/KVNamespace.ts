@@ -1,7 +1,7 @@
 import { LevelUp } from "levelup";
 import { convertRecord, convertToStorable } from "./convert";
 import { KVDataLayer } from "./KVDataLayer";
-import { StoredRecord, DataStorageTypes, OutputTypes } from "./types";
+import { DataStorageTypes, OutputTypes, StoredRecord } from "./types";
 
 const getSecondsSinceEpoch = () => Math.floor(Date.now() / 100);
 
