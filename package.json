@@ -12,7 +12,7 @@
     "build:all": "yarn workspaces run prepublish",
     "clean": "rimraf packages/*/dist",
     "lint": "run-p -c lint:*",
-    "lint:prettier": "prettier **/*.{js,jsx,ts,tsx,json,yaml}",
+    "lint:prettier": "prettier -c **/*.{js,jsx,ts,tsx,json,yaml}",
     "test": "jest"
   },
   "devDependencies": {
