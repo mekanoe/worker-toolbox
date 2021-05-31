@@ -1,3 +1,21 @@
+# v0.0.5 (Mon May 31 2021)
+
+#### 🐛 Bug Fix
+
+- Bump independent versions \[skip ci\] (git@kat.cafe)
+- Update CHANGELOG.md \[skip ci\] (git@kat.cafe)
+
+#### ⚠️ Pushed to `main`
+
+- 👷 make packages publishable ([@kayteh](https://github.com/kayteh))
+
+#### Authors: 2
+
+- Katalina ([@kayteh](https://github.com/kayteh))
+- Katalina Okano (git@kat.cafe)
+
+---
+
 # v0.0.4 (Mon May 31 2021)
 
 #### ⚠️ Pushed to `main`

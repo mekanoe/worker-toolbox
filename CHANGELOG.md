@@ -2,6 +2,19 @@
 
 #### ⚠️ Pushed to `main`
 
+- `@worker-toolbox/express-worker-handler@0.0.5`, `@worker-toolbox/kv@0.0.5`, `@worker-toolbox/context@0.0.5`, `@worker-toolbox/runtime@0.0.5`
+  - 👷 make packages publishable ([@kayteh](https://github.com/kayteh))
+
+#### Authors: 1
+
+- Katalina ([@kayteh](https://github.com/kayteh))
+
+---
+
+# (Mon May 31 2021)
+
+#### ⚠️ Pushed to `main`
+
 - `@worker-toolbox/express-worker-handler@0.0.4`, `@worker-toolbox/kv@0.0.4`, `@worker-toolbox/context@0.0.4`, `@worker-toolbox/runtime@0.0.4`
   - 👷 make packages publishable ([@kayteh](https://github.com/kayteh))
 
