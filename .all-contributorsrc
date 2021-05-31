@@ -1,0 +1,25 @@
+{
+  "projectName": "Worker Toolbox",
+  "projectOwner": "kayteh",
+  "repoType": "github",
+  "repoHost": "",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "gitmoji",
+  "contributors": [
+    {
+      "login": "kayteh",
+      "name": "Katalina",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1581674?v=4",
+      "profile": "https://kat.cafe/",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
