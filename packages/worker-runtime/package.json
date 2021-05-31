@@ -1,10 +1,10 @@
 {
   "name": "@worker-toolbox/runtime",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "dependencies": {
-    "@worker-toolbox/context": "^0.0.2",
-    "@worker-toolbox/express-worker-handler": "^0.0.2",
-    "@worker-toolbox/kv": "^0.0.2"
+    "@worker-toolbox/context": "^0.0.3",
+    "@worker-toolbox/express-worker-handler": "^0.0.3",
+    "@worker-toolbox/kv": "^0.0.3"
   },
   "devDependencies": {
     "axios": "^0.21.1",
