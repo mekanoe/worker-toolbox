@@ -11,5 +11,9 @@
     "level-mem": "^5.0.1",
     "levelup": "^5.0.0",
     "ts-jest": "^26.5.6"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "bbdc889becdd7326baf55f6f8d5439efb5f6666c"
 }

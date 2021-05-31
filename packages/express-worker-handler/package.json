@@ -8,5 +8,9 @@
     "@types/express": "^4.17.11",
     "@types/node-fetch": "^2.5.10",
     "express": "^4.17.1"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "bbdc889becdd7326baf55f6f8d5439efb5f6666c"
 }

@@ -3,5 +3,9 @@
   "version": "0.0.2",
   "dependencies": {
     "@peculiar/webcrypto": "^1.1.7"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "bbdc889becdd7326baf55f6f8d5439efb5f6666c"
 }
