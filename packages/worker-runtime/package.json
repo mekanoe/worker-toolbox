@@ -1,6 +1,11 @@
 {
   "name": "@worker-toolbox/runtime",
   "version": "0.0.3",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepublish": "tsc"
+  },
   "dependencies": {
     "@worker-toolbox/context": "^0.0.3",
     "@worker-toolbox/express-worker-handler": "^0.0.3",

@@ -1,6 +1,11 @@
 {
   "name": "@worker-toolbox/express-worker-handler",
   "version": "0.0.3",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepublish": "tsc"
+  },
   "dependencies": {
     "node-fetch": "^2.6.1"
   },

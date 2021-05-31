@@ -1,6 +1,6 @@
 import { Crypto as SubtleCrypto } from "@peculiar/webcrypto";
+import { ExpressEvent } from "@worker-toolbox/express-worker-handler";
 import fetch, { Response } from "node-fetch";
-import { ExpressEvent } from "../../express-worker-handler/src/ExpressEvent";
 import { WorkerResponse } from "./WorkerResponse";
 
 export type FetchHandler = (

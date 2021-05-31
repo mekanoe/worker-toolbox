@@ -8,6 +8,9 @@
     "packages/*"
   ],
   "scripts": {
+    "build": "run-s clean build:all",
+    "build:all": "yarn workspaces run prepublish",
+    "clean": "rimraf packages/*/dist",
     "lint": "run-p -c lint:*",
     "lint:prettier": "prettier **/*.{js,jsx,ts,tsx,json,yaml}",
     "test": "jest"
@@ -25,6 +28,7 @@
     "prettier": "^2.3.0",
     "prettier-plugin-organize-imports": "2.1.0",
     "prettier-plugin-pkg": "^0.9.0",
+    "rimraf": "^3.0.2",
     "ts-jest": "^26.5.6",
     "typescript": "^4.2.4"
   },
