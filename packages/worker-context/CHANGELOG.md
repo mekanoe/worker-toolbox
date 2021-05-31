@@ -1,3 +1,15 @@
+# v0.0.4 (Mon May 31 2021)
+
+#### ⚠️ Pushed to `main`
+
+- 👷 make packages publishable ([@kayteh](https://github.com/kayteh))
+
+#### Authors: 1
+
+- Katalina ([@kayteh](https://github.com/kayteh))
+
+---
+
 # v0.0.3 (Mon May 31 2021)
 
 #### 🐛 Bug Fix
