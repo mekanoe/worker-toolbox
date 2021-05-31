@@ -17,7 +17,8 @@
       "profile": "https://kat.cafe/",
       "contributions": [
         "code",
-        "doc"
+        "doc",
+        "infra"
       ]
     }
   ],
