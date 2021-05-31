@@ -1,6 +1,8 @@
 {
   "name": "@worker-toolbox/worker-toolbox",
   "version": "0.0.1",
+  "repository": "kayteh/worker-toolbox",
+  "author": "Worker Toolbox CI <gitworkertoolboxci@kat.cafe>",
   "private": true,
   "workspaces": [
     "packages/*"
@@ -11,13 +13,33 @@
     "test": "jest"
   },
   "devDependencies": {
+    "@auto-it/all-contributors": "^10.29.2",
+    "@auto-it/conventional-commits": "^10.29.2",
+    "@auto-it/first-time-contributor": "^10.29.2",
+    "auto": "^10.29.2",
+    "conventional-changelog-gitmoji-config": "^1.4.3",
     "eslint": "^7.26.0",
     "jest": "^26.6.3",
+    "lerna": "^4.0.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.3.0",
     "prettier-plugin-organize-imports": "2.1.0",
     "prettier-plugin-pkg": "^0.9.0",
     "ts-jest": "^26.5.6",
     "typescript": "^4.2.4"
+  },
+  "auto": {
+    "plugins": [
+      "npm",
+      "all-contributors",
+      [
+        "conventional-commits",
+        {
+          "preset": "gitmoji"
+        }
+      ],
+      "first-time-contributor",
+      "released"
+    ]
   }
 }
