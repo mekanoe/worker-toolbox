@@ -1,0 +1,9 @@
+{
+  "name": "@worker-toolbox/dev-server",
+  "version": "0.0.1",
+  "dependencies": {
+    "@worker-toolbox/runtime": "*",
+    "@worker-toolbox/kv": "*",
+    "yargs": "^17.1.0"
+  }
+}

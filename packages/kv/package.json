@@ -9,11 +9,11 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^2.2.2",
-    "@types/jest": "^26.0.23",
-    "@types/levelup": "^4.3.1",
+    "@types/jest": "^26.0.24",
+    "@types/levelup": "^4.3.3",
     "level-mem": "^5.0.1",
-    "levelup": "^5.0.0",
-    "ts-jest": "^26.5.6"
+    "levelup": "^5.0.1",
+    "ts-jest": "^27.0.4"
   },
   "publishConfig": {
     "access": "public"

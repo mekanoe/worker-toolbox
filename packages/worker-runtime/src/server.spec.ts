@@ -1,7 +1,7 @@
-import { KVNamespace } from "@worker-toolbox/kv";
-import axios from "axios";
-import getPort from "get-port";
 import { WorkerRuntimeServer } from "./server";
+import getPort from "get-port";
+import fetch from "node-fetch";
+import { KVNamespace } from "@worker-toolbox/kv";
 
 it("starts a server and processes a worker request", async () => {
   const port = await getPort();
@@ -16,11 +16,11 @@ it("starts a server and processes a worker request", async () => {
 `);
   const server = worker.start();
 
-  const response = await axios.get(`http://localhost:${port}`);
+  const response = await fetch(`http://localhost:${port}`);
   server.close();
 
   expect(response.status).toBe(200);
-  expect(response.data).toBe("hello world!");
+  expect(await response.text()).toBe("hello world!");
 });
 
 it("allows live remounting", async () => {
@@ -35,18 +35,18 @@ it("allows live remounting", async () => {
       const response = new Response("hello world!");
       event.respondWith(response);
     });`);
-  let response = await axios.get(`http://localhost:${port}`);
+  let response = await fetch(`http://localhost:${port}`);
   expect(response.status).toBe(200);
-  expect(response.data).toBe("hello world!");
+  expect(await response.text()).toBe("hello world!");
 
   worker.mountWorker(`
     addEventListener('fetch', (event) => {
       const response = new Response("i am a burger fox!");
       event.respondWith(response);
     });`);
-  response = await axios.get(`http://localhost:${port}`);
+  response = await fetch(`http://localhost:${port}`);
   expect(response.status).toBe(200);
-  expect(response.data).toBe("i am a burger fox!");
+  expect(await response.text()).toBe("i am a burger fox!");
 
   server.close();
 });
@@ -67,11 +67,11 @@ it("mounts environment variables", async () => {
   `);
   const server = worker.start();
 
-  const response = await axios.get(`http://localhost:${port}`);
+  const response = await fetch(`http://localhost:${port}`);
   server.close();
 
   expect(response.status).toBe(200);
-  expect(response.data).toBe("great");
+  expect(await response.text()).toBe("great");
 });
 
 it("mounts KV stores", async () => {
@@ -95,11 +95,11 @@ it("mounts KV stores", async () => {
   `);
   const server = worker.start();
 
-  const response = await axios.get(`http://localhost:${port}`);
+  const response = await fetch(`http://localhost:${port}`);
   server.close();
 
   expect(response.status).toBe(200);
-  expect(response.data).toBe("arctic foxes are white");
+  expect(await response.text()).toBe("arctic foxes are white");
 });
 
 it("throws a 503 when no worker is mounted", async () => {
@@ -109,13 +109,11 @@ it("throws a 503 when no worker is mounted", async () => {
   });
   const server = worker.start();
 
-  const response = await axios.get(`http://localhost:${port}`, {
-    validateStatus: () => true,
-  });
+  const response = await fetch(`http://localhost:${port}`);
   server.close();
 
   expect(response.status).toBe(503);
-  expect(response.data).toMatchInlineSnapshot(
+  expect(await response.text()).toMatchInlineSnapshot(
     `"Server is running, but no worker was mounted with mountWorker()"`
   );
 });
@@ -128,13 +126,11 @@ it("throws a 503 when worker did not register a handler", async () => {
   const server = worker.start();
   worker.mountWorker(``);
 
-  const response = await axios.get(`http://localhost:${port}`, {
-    validateStatus: () => true,
-  });
+  const response = await fetch(`http://localhost:${port}`);
   server.close();
 
   expect(response.status).toBe(503);
-  expect(response.data).toMatchInlineSnapshot(
+  expect(await response.text()).toMatchInlineSnapshot(
     `"Server is running, and worker is mounted, but it never registered a 'fetch' event handler."`
   );
 });

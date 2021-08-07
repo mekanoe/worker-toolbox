@@ -42,9 +42,18 @@ export class ExpressEvent {
         );
       }
 
-      settledResponse.headers.forEach((value, header) =>
-        this.expressResponse.setHeader(header, value)
-      );
+      if (this.expressResponse.headersSent) {
+        throw new Error(
+          "respondWith was called, but server already sent headers. This could indicate a race condition, you called respondWith() more than once, or async task going un-awaited. Cloudflare will not use the worker in this state."
+        );
+      }
+
+      for (let header in settledResponse.headers) {
+        this.expressResponse.setHeader(
+          header,
+          settledResponse.headers.get(header) ?? ""
+        );
+      }
       this.expressResponse.statusCode = settledResponse.status;
       this.expressResponse.end(settledResponse.body);
     } catch (e) {
