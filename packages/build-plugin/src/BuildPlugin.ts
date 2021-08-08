@@ -51,9 +51,12 @@ export class BuildPlugin implements IBuildPlugin {
   }
 
   public async build() {
-    this.update(`addEventListener('fetch', (event) => {
+    this.update(
+      this.options.code ||
+        `addEventListener('fetch', (event) => {
       event.respondWith("Hello world!")
-    })`);
+    })`
+    );
   }
 
   public async update(code: string) {

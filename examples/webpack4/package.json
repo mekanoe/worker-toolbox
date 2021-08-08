@@ -3,12 +3,14 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "yarn worker-dev-server -p 8001"
+    "build": "yarn worker-toolbox build",
+    "prod": "yarn worker-toolbox start -p 8001",
+    "start": "yarn worker-toolbox watch -p 8001"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^2.2.2",
     "@worker-toolbox/build-plugin-webpack4": "file:../../packages/build-plugin-webpack4",
-    "@worker-toolbox/dev-server": "*",
+    "@worker-toolbox/cli": "*",
     "ts-loader": "^8.3.0",
     "webpack": "4.46.0"
   }

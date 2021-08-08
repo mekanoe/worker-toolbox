@@ -1,8 +1,8 @@
 {
-  "name": "@worker-toolbox/dev-server",
+  "name": "@worker-toolbox/cli",
   "version": "0.0.6",
   "bin": {
-    "worker-dev-server": "./bin/dev-server.js"
+    "worker-toolbox": "./bin/cli.js"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -10,8 +10,9 @@
     "prepublish": "tsc"
   },
   "dependencies": {
-    "@worker-toolbox/dev-server": "*",
+    "@worker-toolbox/build-plugin": "*",
     "@worker-toolbox/worker-runtime": "*",
+    "chalk": "^4.1.2",
     "chokidar": "3.5.2",
     "yargs": "^17.1.0"
   },

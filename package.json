@@ -9,13 +9,15 @@
     "examples/*"
   ],
   "scripts": {
-    "build": "npm-run-all clean build:precore build:core -p build:plugins build:cli",
-    "build:cli": "run-s build:cli:*",
-    "build:cli:dev-server": "yarn workspace @worker-toolbox/dev-server run prepublish",
+    "build": "npm-run-all clean build:precore build:core -p build:plugins build:cli -s build:examples",
+    "build:cli": "yarn workspace @worker-toolbox/cli run prepublish",
     "build:core": "run-s build:core:*",
     "build:core:ctx": "yarn workspace @worker-toolbox/worker-context run prepublish",
     "build:core:plugins": "yarn workspace @worker-toolbox/build-plugin run prepublish",
     "build:core:runtime": "yarn workspace @worker-toolbox/worker-runtime run prepublish",
+    "build:examples": "run-p build:examples:*",
+    "build:examples:esbuild": "yarn workspace @worker-toolbox/example-esbuild run build",
+    "build:examples:webpack4": "yarn workspace @worker-toolbox/example-webpack4 run build",
     "build:plugins": "run-s build:plugins:*",
     "build:plugins:bpesb": "yarn workspace @worker-toolbox/build-plugin-esbuild run prepublish",
     "build:plugins:bpwp4": "yarn workspace @worker-toolbox/build-plugin-webpack4 run prepublish",
