@@ -5,7 +5,7 @@
     "prepublish": "tsc"
   },
   "dependencies": {
-    "@worker-toolbox/dev-server": "*",
+    "@worker-toolbox/build-plugin": "*",
     "chokidar": "3.5.2",
     "webpack": "4.46.0"
   },

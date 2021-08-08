@@ -1,4 +1,4 @@
-import { BuildPlugin, IBuildPlugin } from "@worker-toolbox/dev-server";
+import { BuildPlugin, IBuildPlugin } from "@worker-toolbox/build-plugin";
 import fs from "fs";
 import path from "path";
 import webpack from "webpack";

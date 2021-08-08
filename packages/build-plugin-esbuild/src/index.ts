@@ -1,4 +1,4 @@
-import { BuildPlugin, IBuildPlugin } from "@worker-toolbox/dev-server";
+import { BuildPlugin, IBuildPlugin } from "@worker-toolbox/build-plugin";
 import { build } from "esbuild";
 
 export class ESBuildBuildPlugin extends BuildPlugin implements IBuildPlugin {

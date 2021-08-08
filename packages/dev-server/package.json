@@ -10,6 +10,7 @@
     "prepublish": "tsc"
   },
   "dependencies": {
+    "@worker-toolbox/dev-server": "*",
     "@worker-toolbox/worker-runtime": "*",
     "chokidar": "3.5.2",
     "yargs": "^17.1.0"

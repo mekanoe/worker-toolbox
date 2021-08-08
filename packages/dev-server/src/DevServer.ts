@@ -1,9 +1,9 @@
+import { BuildPluginConstructor } from "@worker-toolbox/build-plugin";
 import { WorkerRuntimeServer } from "@worker-toolbox/worker-runtime";
 import fs from "fs";
 import path from "path";
 import { hideBin } from "yargs/helpers";
 import yargs from "yargs/yargs";
-import { BuildPluginConstructor } from "./BuildPlugin";
 
 const flags = () =>
   yargs(hideBin(process.argv))
