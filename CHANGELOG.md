@@ -1,5 +1,18 @@
 # (Sun Aug 08 2021)
 
+#### ⚠️ Pushed to `main`
+
+- `@worker-toolbox/build-plugin-esbuild@0.0.8`, `@worker-toolbox/build-plugin-webpack4@0.0.8`, `@worker-toolbox/build-plugin@0.0.8`, `@worker-toolbox/cli@0.0.8`, `@worker-toolbox/express-worker-handler@0.0.8`, `@worker-toolbox/kv@0.0.8`, `@worker-toolbox/worker-context@0.0.8`, `@worker-toolbox/worker-runtime@0.0.8`
+  - 👔 add waitUntil FetchEvent handler ([@kayteh](https://github.com/kayteh))
+
+#### Authors: 1
+
+- Katalina ([@kayteh](https://github.com/kayteh))
+
+---
+
+# (Sun Aug 08 2021)
+
 #### 🐛 Bug Fix
 
 - `@worker-toolbox/build-plugin-esbuild@0.0.7`, `@worker-toolbox/build-plugin-webpack4@0.0.7`, `@worker-toolbox/build-plugin@0.0.7`, `@worker-toolbox/cli@0.0.7`, `@worker-toolbox/express-worker-handler@0.0.7`, `@worker-toolbox/kv@0.0.7`, `@worker-toolbox/worker-context@0.0.7`, `@worker-toolbox/worker-runtime@0.0.7`
