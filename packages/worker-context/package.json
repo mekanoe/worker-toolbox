@@ -1,6 +1,6 @@
 {
   "name": "@worker-toolbox/worker-context",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@peculiar/webcrypto": "^1.1.7",
-    "@worker-toolbox/express-worker-handler": "^0.0.8"
+    "@worker-toolbox/express-worker-handler": "^0.0.9"
   },
   "publishConfig": {
     "access": "public"

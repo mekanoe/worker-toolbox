@@ -1,11 +1,11 @@
 {
   "name": "@worker-toolbox/build-plugin-webpack4",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "scripts": {
     "prepublish": "tsc"
   },
   "dependencies": {
-    "@worker-toolbox/build-plugin": "^0.0.8",
+    "@worker-toolbox/build-plugin": "^0.0.9",
     "chokidar": "3.5.2",
     "webpack": "4.46.0"
   },
