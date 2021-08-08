@@ -2,6 +2,19 @@
 
 #### ⚠️ Pushed to `main`
 
+- `@worker-toolbox/build-plugin-esbuild@0.0.9`, `@worker-toolbox/build-plugin-webpack4@0.0.9`, `@worker-toolbox/build-plugin@0.0.9`, `@worker-toolbox/cli@0.0.9`, `@worker-toolbox/express-worker-handler@0.0.9`, `@worker-toolbox/kv@0.0.9`, `@worker-toolbox/router@0.0.2`, `@worker-toolbox/worker-context@0.0.9`, `@worker-toolbox/worker-runtime@0.0.9`
+  - 💚 fix linting issue in router ([@kayteh](https://github.com/kayteh))
+
+#### Authors: 1
+
+- Katalina ([@kayteh](https://github.com/kayteh))
+
+---
+
+# (Sun Aug 08 2021)
+
+#### ⚠️ Pushed to `main`
+
 - `@worker-toolbox/build-plugin-esbuild@0.0.8`, `@worker-toolbox/build-plugin-webpack4@0.0.8`, `@worker-toolbox/build-plugin@0.0.8`, `@worker-toolbox/cli@0.0.8`, `@worker-toolbox/express-worker-handler@0.0.8`, `@worker-toolbox/kv@0.0.8`, `@worker-toolbox/worker-context@0.0.8`, `@worker-toolbox/worker-runtime@0.0.8`
   - 👔 add waitUntil FetchEvent handler ([@kayteh](https://github.com/kayteh))
 

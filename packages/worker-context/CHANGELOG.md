@@ -1,3 +1,15 @@
+# v0.0.9 (Sun Aug 08 2021)
+
+#### ⚠️ Pushed to `main`
+
+- 💚 fix linting issue in router ([@kayteh](https://github.com/kayteh))
+
+#### Authors: 1
+
+- Katalina ([@kayteh](https://github.com/kayteh))
+
+---
+
 # v0.0.8 (Sun Aug 08 2021)
 
 #### ⚠️ Pushed to `main`
