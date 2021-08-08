@@ -1,11 +1,16 @@
 import { BuildPluginConstructor } from "@worker-toolbox/build-plugin";
 import { WorkerRuntimeServer } from "@worker-toolbox/worker-runtime";
 import chalk from "chalk";
-import { existsSync, readFileSync, writeFileSync } from "fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
+import level, { LevelDB } from "level";
 import path from "path";
 import yargs from "yargs";
+import { KVNamespace } from "../../kv/dist";
 
 type WorkerConfig = {
+  kv?: string[];
+  persistKV?: boolean;
+  environment?: Record<string, string>;
   buildPlugin?: BuildPluginConstructor;
   buildPluginOptions?: any;
 };
@@ -44,6 +49,11 @@ export const run = async () => {
       alias: ["v"],
       count: true,
     })
+    .option("dataDir", {
+      alias: ["d"],
+      description: "Directory to store persisted KV data",
+      string: true,
+    })
     .command("build", "build a worker", buildCommand)
     .command(
       "watch",
@@ -80,6 +90,34 @@ const getConfig = (configPath: string, V: GlobalConfig["V"]): WorkerConfig => {
   }
 };
 
+const setupRuntime = (config: WorkerConfig | undefined, dataDir: string) => {
+  const runtimeConfig: {
+    kvNamespaces: Record<string, KVNamespace>;
+    environment: Record<string, string>;
+  } = {
+    kvNamespaces: {},
+    environment: {},
+  };
+
+  if (config?.environment) {
+    runtimeConfig.environment = config.environment;
+  }
+
+  if (config?.kv) {
+    for (let kvName of config.kv) {
+      let persistence: LevelDB | undefined = undefined;
+      if (config.persistKV) {
+        mkdirSync(dataDir, { recursive: true });
+        persistence = level(path.resolve(dataDir, kvName));
+      }
+
+      runtimeConfig.kvNamespaces[kvName] = new KVNamespace(persistence);
+    }
+  }
+
+  return runtimeConfig;
+};
+
 const buildCommand = withGlobalConfig(({ V, config, basePath }) => {
   if (!config) {
     throw new Error("");
@@ -92,6 +130,7 @@ const buildCommand = withGlobalConfig(({ V, config, basePath }) => {
   const onWrite = (code: string) => {
     V(1, "build finished");
     const outputPath = path.resolve(basePath, "dist/worker.js");
+    mkdirSync(path.dirname(outputPath), { recursive: true });
     writeFileSync(outputPath, code, {
       encoding: "utf-8",
     });
@@ -114,21 +153,24 @@ const buildCommand = withGlobalConfig(({ V, config, basePath }) => {
   buildPlugin.build();
 });
 
-const runCommand = withGlobalConfig(({ V, args: { worker, port } }) => {
-  if (!worker || !existsSync(worker)) {
-    throw new Error("--worker needs to be set to a pre-built worker file");
+const runCommand = withGlobalConfig(
+  ({ V, config, basePath, args: { worker, port, data } }) => {
+    if (!worker || !existsSync(worker)) {
+      throw new Error("--worker needs to be set to a pre-built worker file");
+    }
+
+    V(1, `loading code from ${worker}`);
+    const code = readFileSync(worker, { encoding: "utf-8" });
+
+    V(0, `starting server on http://localhost:${port}`);
+    const runtime = new WorkerRuntimeServer({
+      port,
+      ...setupRuntime(config, data || path.resolve(basePath, ".data")),
+    });
+    runtime.start();
+    runtime.mountWorker(code);
   }
-
-  V(1, `loading code from ${worker}`);
-  const code = readFileSync(worker, { encoding: "utf-8" });
-
-  V(0, `starting server on http://localhost:${port}`);
-  const runtime = new WorkerRuntimeServer({
-    port,
-  });
-  runtime.start();
-  runtime.mountWorker(code);
-});
+);
 
 const serverCommand = (watch: boolean) =>
   withGlobalConfig(({ V, config, basePath, args: { port } }) => {
@@ -143,6 +185,7 @@ const serverCommand = (watch: boolean) =>
     V(0, `starting server on http://localhost:${port}`);
     const runtime = new WorkerRuntimeServer({
       port,
+      ...setupRuntime(config, path.resolve(basePath, ".data")),
     });
     runtime.start();
 

@@ -8,12 +8,13 @@ export class KVDataLayer {
 
   public async getRecord(key: string): Promise<StoredRecord | null> {
     if (this.levelDB) {
-      const value = await this.levelDB.get(key);
-      if (!value) {
-        return null;
-      }
-
-      return JSON.parse(value);
+      try {
+        const value = await this.levelDB.get(key);
+        if (!value) {
+          return null;
+        }
+        return JSON.parse(value);
+      } catch (e) {}
     }
 
     return this.memoryStore.get(key) || null;

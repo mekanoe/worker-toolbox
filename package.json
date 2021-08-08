@@ -17,6 +17,7 @@
     "build:core:runtime": "yarn workspace @worker-toolbox/worker-runtime run prepublish",
     "build:examples": "run-p build:examples:*",
     "build:examples:esbuild": "yarn workspace @worker-toolbox/example-esbuild run build",
+    "build:examples:kv": "yarn workspace @worker-toolbox/example-kv run build",
     "build:examples:webpack4": "yarn workspace @worker-toolbox/example-webpack4 run build",
     "build:plugins": "run-s build:plugins:*",
     "build:plugins:bpesb": "yarn workspace @worker-toolbox/build-plugin-esbuild run prepublish",
@@ -24,7 +25,8 @@
     "build:precore": "run-p build:precore:*",
     "build:precore:ewh": "yarn workspace @worker-toolbox/express-worker-handler run prepublish",
     "build:precore:kv": "yarn workspace @worker-toolbox/kv run prepublish",
-    "clean": "rimraf packages/*/dist",
+    "build:precore:router": "yarn workspace @worker-toolbox/router run prepublish",
+    "clean": "rimraf packages/*/dist examples/*/dist",
     "lint": "run-p -c lint:*",
     "lint:prettier": "prettier -c **/*.{js,jsx,ts,tsx,json,yaml}",
     "test": "jest"

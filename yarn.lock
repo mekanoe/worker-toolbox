@@ -1666,6 +1666,14 @@
   dependencies:
     "@types/node" "*"
 
+"@types/encoding-down@*":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@types/encoding-down/-/encoding-down-5.0.0.tgz#0b5b90b93ac3aa75148f19508044e7bd36463557"
+  integrity sha512-G0MlS/+/U2RIQLcSEhhAcoMrXw3hXUCFSKbhbeEljoKMra2kq+NPX6tfOveSWQLX2hJXBo+YrvKgAGe+tFL1Aw==
+  dependencies:
+    "@types/abstract-leveldown" "*"
+    "@types/level-codec" "*"
+
 "@types/express-serve-static-core@^4.17.18":
   version "4.17.19"
   resolved "https://registry.yarnpkg.com/@types/express-serve-static-core/-/express-serve-static-core-4.17.19.tgz#00acfc1632e729acac4f1530e9e16f6dd1508a1d"
@@ -1718,6 +1726,34 @@
   dependencies:
     jest-diff "^26.0.0"
     pretty-format "^26.0.0"
+
+"@types/level-codec@*":
+  version "9.0.1"
+  resolved "https://registry.yarnpkg.com/@types/level-codec/-/level-codec-9.0.1.tgz#b135e0b3da81185b6f27655334c5f1da89b2b0af"
+  integrity sha512-6z7DSlBsmbax3I/bV1Q6jT1nKquDjFl95LURVThdKtwILkRawLYtXdINW19xM95N5kqN2detWb2iGrbUlPwNyw==
+
+"@types/level-errors@*":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@types/level-errors/-/level-errors-3.0.0.tgz#15c1f4915a5ef763b51651b15e90f6dc081b96a8"
+  integrity sha512-/lMtoq/Cf/2DVOm6zE6ORyOM+3ZVm/BvzEZVxUhf6bgh8ZHglXlBqxbxSlJeVp8FCbD3IVvk/VbsaNmDjrQvqQ==
+
+"@types/level@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@types/level/-/level-6.0.0.tgz#0bc0aaf1106598e1774e1dc5b69f0d58885d9d34"
+  integrity sha512-NjaUpukKfCvnV4Wk0jUaodFi2/66HxgpYghc2aV8iP+zk2NMt/9ps1eVlifqOU/+eLzMlDIY69NWkbPaAstukQ==
+  dependencies:
+    "@types/abstract-leveldown" "*"
+    "@types/encoding-down" "*"
+    "@types/levelup" "*"
+
+"@types/levelup@*":
+  version "4.3.3"
+  resolved "https://registry.yarnpkg.com/@types/levelup/-/levelup-4.3.3.tgz#4dc2b77db079b1cf855562ad52321aa4241b8ef4"
+  integrity sha512-K+OTIjJcZHVlZQN1HmU64VtrC0jC3dXWQozuEIR9zVvltIk90zaGPM2AgT+fIkChpzHhFE3YnvFLCbLtzAmexA==
+  dependencies:
+    "@types/abstract-leveldown" "*"
+    "@types/level-errors" "*"
+    "@types/node" "*"
 
 "@types/levelup@^4.3.1":
   version "4.3.1"
@@ -2001,15 +2037,15 @@
     "@xtuc/long" "4.2.2"
 
 "@worker-toolbox/build-plugin-esbuild@file:packages/build-plugin-esbuild":
-  version "0.0.6"
+  version "0.0.8"
   dependencies:
-    "@worker-toolbox/build-plugin" "*"
+    "@worker-toolbox/build-plugin" "^0.0.8"
     esbuild "^0.12.19"
 
 "@worker-toolbox/build-plugin-webpack4@file:packages/build-plugin-webpack4":
-  version "0.0.6"
+  version "0.0.8"
   dependencies:
-    "@worker-toolbox/build-plugin" "*"
+    "@worker-toolbox/build-plugin" "^0.0.8"
     chokidar "3.5.2"
     webpack "4.46.0"
 
@@ -3897,6 +3933,16 @@ encoding-down@^6.3.0:
     inherits "^2.0.3"
     level-codec "^9.0.0"
     level-errors "^2.0.0"
+
+encoding-down@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/encoding-down/-/encoding-down-7.0.0.tgz#63357e0f44b4a85664d9539bd711500da70f0c63"
+  integrity sha512-hor6z2W/ZrVqDYMawQp7VtfEt6BrvYw+mgjWLauUMZsIBjMt1/k5aa+JreLbtjwJdkjrZ39TU+pV5GpHPGRpog==
+  dependencies:
+    abstract-leveldown "^7.0.0"
+    inherits "^2.0.3"
+    level-codec "^10.0.0"
+    level-errors "^3.0.0"
 
 encoding@^0.1.12:
   version "0.1.13"
@@ -6261,6 +6307,13 @@ lerna@^4.0.0:
     import-local "^3.0.2"
     npmlog "^4.1.2"
 
+level-codec@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/level-codec/-/level-codec-10.0.0.tgz#f9e892770532c6cdcc83529546730791b0c62c12"
+  integrity sha512-QW3VteVNAp6c/LuV6nDjg7XDXx9XHK4abmQarxZmlRSDyXYk20UdaJTSX6yzVvQ4i0JyWSB7jert0DsyD/kk6g==
+  dependencies:
+    buffer "^6.0.3"
+
 level-codec@^9.0.0:
   version "9.0.2"
   resolved "https://registry.yarnpkg.com/level-codec/-/level-codec-9.0.2.tgz#fd60df8c64786a80d44e63423096ffead63d8cbc"
@@ -6309,6 +6362,16 @@ level-iterator-stream@~4.0.0:
     readable-stream "^3.4.0"
     xtend "^4.0.2"
 
+level-js@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/level-js/-/level-js-6.0.0.tgz#1faff0eb92ca34e4565d1f7bca7026989855625b"
+  integrity sha512-7dp7JuaoQoqKW4ZGvrV1RB5f51/ktLdEo9fSDsh3Ofmg7sKCMu3X0CIngbY/IUz/YyskhN7LRvEVIkZHCY3LKQ==
+  dependencies:
+    abstract-leveldown "^7.0.0"
+    buffer "^6.0.3"
+    inherits "^2.0.3"
+    ltgt "^2.1.2"
+
 level-mem@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/level-mem/-/level-mem-5.0.1.tgz#c345126b74f5b8aa376dc77d36813a177ef8251d"
@@ -6325,6 +6388,14 @@ level-packager@^5.0.3:
     encoding-down "^6.3.0"
     levelup "^4.3.2"
 
+level-packager@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/level-packager/-/level-packager-6.0.0.tgz#1881e062d2dc694ce88101b3212d37ef90aa7a99"
+  integrity sha512-me656XRWfOVqs9wc+mWckZ6Rb1GuP33ndN4ZntDXwXFspX8cGA++Y+YqJsdE/mjTiipTuxXf047Z4rV62nOVuw==
+  dependencies:
+    encoding-down "^7.0.0"
+    levelup "^5.0.0"
+
 level-supports@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/level-supports/-/level-supports-2.0.0.tgz#b0b9f63f30c4175fb2612217144f03f3b77580d9"
@@ -6336,6 +6407,24 @@ level-supports@~1.0.0:
   integrity sha512-rXM7GYnW8gsl1vedTJIbzOrRv85c/2uCMpiiCzO2fndd06U/kUXEEU9evYn4zFggBOg36IsBW8LzqIpETwwQzg==
   dependencies:
     xtend "^4.0.2"
+
+level@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/level/-/level-7.0.0.tgz#10fa2d5a0b3b21a99d33e9307c92c1270243d1ce"
+  integrity sha512-QrBnjcWywalh86ms9hfizvxT5aBHrgWEu6rLChS9tFE2wwFU3aI1r0v+2SSZIyeUr4O4PFo8+sCc1kebahdhlw==
+  dependencies:
+    level-js "^6.0.0"
+    level-packager "^6.0.0"
+    leveldown "^6.0.0"
+
+leveldown@^6.0.0:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/leveldown/-/leveldown-6.0.1.tgz#d4758e4e91c1c5ff90d3e1cd29fb1bf5ce19ae22"
+  integrity sha512-D1fz5G58UrLBg5pXcN1pNxWtNLXwBiZsYt06XqjhD5zBHj/ws7xvZe3K0ZAhCbYuL9b4nbRCim8Z15HYWL2exQ==
+  dependencies:
+    abstract-leveldown "^7.0.0"
+    napi-macros "~2.0.0"
+    node-gyp-build "~4.2.1"
 
 levelup@^4.3.2:
   version "4.4.0"
@@ -6574,7 +6663,7 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-ltgt@~2.2.0:
+ltgt@^2.1.2, ltgt@~2.2.0:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/ltgt/-/ltgt-2.2.1.tgz#f35ca91c493f7b73da0e07495304f17b31f87ee5"
   integrity sha1-81ypHEk/e3PaDgdJUwTxezH4fuU=
@@ -7049,6 +7138,11 @@ nanomatch@^1.2.9:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
+napi-macros@~2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/napi-macros/-/napi-macros-2.0.0.tgz#2b6bae421e7b96eb687aa6c77a7858640670001b"
+  integrity sha512-A0xLykHtARfueITVDernsAWdtIMbOJgKgcluwENp3AlsKN/PloyO10HtmoqnFAQAcxPkgZN7wdfPfEd0zNGxbg==
+
 natural-compare@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
@@ -7078,6 +7172,11 @@ node-fetch@2.6.1, node-fetch@^2.6.0, node-fetch@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
   integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
+
+node-gyp-build@~4.2.1:
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/node-gyp-build/-/node-gyp-build-4.2.3.tgz#ce6277f853835f718829efb47db20f3e4d9c4739"
+  integrity sha512-MN6ZpzmfNCRM+3t57PTJHgHyw/h4OWnZ6mR8P5j/uZtqQr46RRuDE/P+g3n0YR/AiYXeWixZZzaip77gdICfRg==
 
 node-gyp@^5.0.2:
   version "5.1.1"

@@ -1,0 +1,15 @@
+{
+  "name": "@worker-toolbox/router",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepublish": "tsc"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^2.2.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

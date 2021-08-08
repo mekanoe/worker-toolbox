@@ -1,0 +1,16 @@
+{
+  "name": "@worker-toolbox/example-kv",
+  "version": "0.0.3",
+  "private": true,
+  "scripts": {
+    "build": "yarn worker-toolbox build",
+    "prod": "yarn worker-toolbox start -p 8001",
+    "start": "yarn worker-toolbox watch -p 8001"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^2.2.2",
+    "@worker-toolbox/build-plugin-webpack4": "^0.0.8",
+    "@worker-toolbox/cli": "^0.0.8",
+    "@worker-toolbox/router": "*"
+  }
+}
