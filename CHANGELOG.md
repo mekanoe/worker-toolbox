@@ -1,3 +1,16 @@
+# (Sun Aug 08 2021)
+
+#### 🐛 Bug Fix
+
+- `@worker-toolbox/build-plugin-esbuild@0.0.7`, `@worker-toolbox/build-plugin-webpack4@0.0.7`, `@worker-toolbox/build-plugin@0.0.7`, `@worker-toolbox/cli@0.0.7`, `@worker-toolbox/express-worker-handler@0.0.7`, `@worker-toolbox/kv@0.0.7`, `@worker-toolbox/worker-context@0.0.7`, `@worker-toolbox/worker-runtime@0.0.7`
+  - ✨ add dev-server w/ plugins for esbuild and webpack4 [#25](https://github.com/kayteh/worker-toolbox/pull/25) ([@kayteh](https://github.com/kayteh))
+
+#### Authors: 1
+
+- Katalina ([@kayteh](https://github.com/kayteh))
+
+---
+
 # (Mon May 31 2021)
 
 #### ⚠️ Pushed to `main`
