@@ -1,6 +1,6 @@
 {
   "name": "@worker-toolbox/cli",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "bin": {
     "worker-toolbox": "./bin/cli.js"
   },
@@ -10,8 +10,8 @@
     "prepublish": "tsc"
   },
   "dependencies": {
-    "@worker-toolbox/build-plugin": "*",
-    "@worker-toolbox/worker-runtime": "*",
+    "@worker-toolbox/build-plugin": "^0.0.7",
+    "@worker-toolbox/worker-runtime": "^0.0.7",
     "chalk": "^4.1.2",
     "chokidar": "3.5.2",
     "yargs": "^17.1.0"

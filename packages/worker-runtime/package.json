@@ -1,15 +1,15 @@
 {
   "name": "@worker-toolbox/worker-runtime",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "prepublish": "tsc"
   },
   "dependencies": {
-    "@worker-toolbox/express-worker-handler": "^0.0.6",
-    "@worker-toolbox/kv": "^0.0.6",
-    "@worker-toolbox/worker-context": "^0.0.6"
+    "@worker-toolbox/express-worker-handler": "^0.0.7",
+    "@worker-toolbox/kv": "^0.0.7",
+    "@worker-toolbox/worker-context": "^0.0.7"
   },
   "devDependencies": {
     "axios": "^0.21.1",
