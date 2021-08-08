@@ -19,5 +19,8 @@
   "devDependencies": {
     "@types/node": "^16.4.13",
     "@types/yargs": "^17.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
