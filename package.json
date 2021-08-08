@@ -5,14 +5,25 @@
   "author": "Worker Toolbox CI <gitworkertoolboxci@kat.cafe>",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "examples/*"
   ],
   "scripts": {
-    "build": "run-s clean build:all",
-    "build:all": "yarn workspaces run prepublish",
+    "build": "run-s clean build:first build:middle build:last",
+    "build:first": "run-p build:first:*",
+    "build:first:ewh": "yarn workspace @worker-toolbox/express-worker-handler run prepublish",
+    "build:first:kv": "yarn workspace @worker-toolbox/kv run prepublish",
+    "build:last": "run-p build:last:*",
+    "build:last:bpesb": "yarn workspace @worker-toolbox/build-plugin-esbuild run prepublish",
+    "build:last:bpwp4": "yarn workspace @worker-toolbox/build-plugin-webpack4 run prepublish",
+    "build:middle": "run-s build:middle:*",
+    "build:middle:ctx": "yarn workspace @worker-toolbox/worker-context run prepublish",
+    "build:middle:runtime": "yarn workspace @worker-toolbox/worker-runtime run prepublish",
+    "build:middle:zzz-dev-server": "yarn workspace @worker-toolbox/dev-server run prepublish",
     "clean": "rimraf packages/*/dist",
     "lint": "run-p -c lint:*",
     "lint:prettier": "prettier -c **/*.{js,jsx,ts,tsx,json,yaml}",
+    "lint:tsc": "yarn workspaces run tsc --noEmit",
     "test": "jest"
   },
   "devDependencies": {

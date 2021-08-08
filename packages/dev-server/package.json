@@ -1,0 +1,21 @@
+{
+  "name": "@worker-toolbox/dev-server",
+  "version": "0.0.6",
+  "bin": {
+    "worker-dev-server": "./bin/dev-server.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepublish": "tsc"
+  },
+  "dependencies": {
+    "@worker-toolbox/worker-runtime": "*",
+    "chokidar": "3.5.2",
+    "yargs": "^17.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.4.13",
+    "@types/yargs": "^17.0.2"
+  }
+}

@@ -1,6 +1,9 @@
-import { createWorkerContext, FetchHandler } from "@worker-toolbox/context";
 import { ExpressEvent } from "@worker-toolbox/express-worker-handler";
 import { KVNamespace } from "@worker-toolbox/kv";
+import {
+  createWorkerContext,
+  FetchHandler,
+} from "@worker-toolbox/worker-context";
 import createExpress, { Request, Response } from "express";
 import vm from "vm";
 

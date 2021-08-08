@@ -1,0 +1,15 @@
+{
+  "name": "@worker-toolbox/build-plugin-webpack4",
+  "version": "0.0.6",
+  "scripts": {
+    "prepublish": "tsc"
+  },
+  "dependencies": {
+    "@worker-toolbox/dev-server": "*",
+    "chokidar": "3.5.2",
+    "webpack": "4.46.0"
+  },
+  "devDependencies": {
+    "@types/webpack": "4.41.30"
+  }
+}
