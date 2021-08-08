@@ -4,7 +4,7 @@ export type Handler = (
 ) => Promise<Response> | Response;
 
 export type HandlerTools = {
-  waitUntil: FetchEvent['waitUntil'];
+  waitUntil: FetchEvent["waitUntil"];
 };
 
 type RoutingTree = {
@@ -53,14 +53,17 @@ export class Router {
     return response;
   }
 
-  private async processRequest({ request, waitUntil }: FetchEvent): Promise<Response> {
+  private async processRequest({
+    request,
+    waitUntil,
+  }: FetchEvent): Promise<Response> {
     const url = new URL(request.url);
 
-    if (url.pathname === '/' || url.pathname === '') {
+    if (url.pathname === "/" || url.pathname === "") {
       return this.fallbacks.root(request, { waitUntil });
     }
     const lowerMethod = request.method.toLowerCase();
-    const rootPath = url.pathname.split('/')[1];
+    const rootPath = url.pathname.split("/")[1];
     const handler = this.routingTree[lowerMethod]?.[rootPath];
 
     if (handler) {
@@ -73,7 +76,7 @@ export class Router {
       }
     }
 
-    if (lowerMethod === 'options') {
+    if (lowerMethod === "options") {
       return new Response(null, {});
     }
 
@@ -81,38 +84,38 @@ export class Router {
   }
 
   private respondToRoot(): Response {
-    return new Response('Hi there!');
+    return new Response("Hi there!");
   }
 
   private notFound(): Response {
-    return new Response(JSON.stringify({ error: 'not_found' }), {
+    return new Response(JSON.stringify({ error: "not_found" }), {
       status: 404,
     });
   }
 
   private serverError(): Response {
-    return new Response(JSON.stringify({ error: 'internal_server_error' }), {
+    return new Response(JSON.stringify({ error: "internal_server_error" }), {
       status: 500,
     });
   }
 
   private injectCORSHeaders(request: Request, headers: Headers) {
-    headers.set('access-control-allow-methods', '*');
-    headers.set('access-control-allow-headers', '*');
+    headers.set("access-control-allow-methods", "*");
+    headers.set("access-control-allow-headers", "*");
 
     if (this.corsOrigins.length === 0) {
-      headers.set('access-control-allow-origin', '*');
+      headers.set("access-control-allow-origin", "*");
       return;
     }
 
-    const originHeader = request.headers.get('origin');
+    const originHeader = request.headers.get("origin");
     if (!originHeader) {
       return;
     }
 
     const originHostname = new URL(originHeader).hostname;
     if (this.corsOrigins.includes(originHostname)) {
-      headers.set('access-control-allow-origin', originHostname);
+      headers.set("access-control-allow-origin", originHostname);
     }
   }
 }
