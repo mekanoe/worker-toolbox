@@ -31,6 +31,7 @@ jobs:
       - run: yarn lint
       - run: yarn test
       - run: git fetch --tags
+      - run: cat packages/cli/bin/cli.js
       - run: yarn auto shipit
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
