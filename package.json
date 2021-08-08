@@ -27,7 +27,6 @@
     "clean": "rimraf packages/*/dist",
     "lint": "run-p -c lint:*",
     "lint:prettier": "prettier -c **/*.{js,jsx,ts,tsx,json,yaml}",
-    "lint:tsc": "yarn workspaces run tsc --noEmit",
     "test": "jest"
   },
   "devDependencies": {
