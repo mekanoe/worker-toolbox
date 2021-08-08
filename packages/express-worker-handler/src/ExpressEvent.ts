@@ -53,4 +53,8 @@ export class ExpressEvent {
       this.expressResponse.json({ error: "internal server error" });
     }
   }
+
+  public async waitUntil(promise: Promise<any>) {
+    await promise;
+  }
 }
