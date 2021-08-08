@@ -14,14 +14,6 @@ jobs:
         with:
           node-version: 14
 
-      - name: restore lerna
-        uses: actions/cache@v2
-        with:
-          path: |
-            node_modules
-            */*/node_modules
-          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
-
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
@@ -35,10 +27,11 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - run: yarn
-      - run: yarn lint
       - run: yarn build
+      - run: yarn lint
       - run: yarn test
       - run: git fetch --tags
+      - run: git reset --hard
       - run: yarn auto shipit
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

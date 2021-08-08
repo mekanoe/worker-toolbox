@@ -1,0 +1,14 @@
+{
+  "name": "@worker-toolbox/build-plugin-esbuild",
+  "version": "0.0.6",
+  "scripts": {
+    "prepublish": "tsc"
+  },
+  "dependencies": {
+    "@worker-toolbox/build-plugin": "*",
+    "esbuild": "^0.12.19"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
