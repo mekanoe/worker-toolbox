@@ -2037,15 +2037,15 @@
     "@xtuc/long" "4.2.2"
 
 "@worker-toolbox/build-plugin-esbuild@file:packages/build-plugin-esbuild":
-  version "0.0.8"
+  version "0.0.9"
   dependencies:
-    "@worker-toolbox/build-plugin" "^0.0.8"
+    "@worker-toolbox/build-plugin" "^0.0.9"
     esbuild "^0.12.19"
 
 "@worker-toolbox/build-plugin-webpack4@file:packages/build-plugin-webpack4":
-  version "0.0.8"
+  version "0.0.9"
   dependencies:
-    "@worker-toolbox/build-plugin" "^0.0.8"
+    "@worker-toolbox/build-plugin" "^0.0.9"
     chokidar "3.5.2"
     webpack "4.46.0"
 
@@ -9783,9 +9783,9 @@ typescript-memoize@^1.0.0-alpha.3:
   integrity sha512-oJNge1qUrOK37d5Y6Ly2txKeuelYVsFtNF6U9kXIN7juudcQaHJQg2MxLOy0CqtkW65rVDYuTCOjnSIVPd8z3w==
 
 typescript@^4.2.4:
-  version "4.3.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.3.2.tgz#399ab18aac45802d6f2498de5054fcbbe716a805"
-  integrity sha512-zZ4hShnmnoVnAHpVHWpTcxdv7dWP60S2FsydQLV8V5PbS3FifjWFFRiHSWpDJahly88PRyV5teTSLoq4eG7mKw==
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.4.2.tgz#6d618640d430e3569a1dfb44f7d7e600ced3ee86"
+  integrity sha512-gzP+t5W4hdy4c+68bfcv0t400HVJMMd2+H9B7gae1nQlBzCqvrXX+6GL/b3GAgyTH966pzrZ70/fRjwAtZksSQ==
 
 typical@^4.0.0:
   version "4.0.0"
