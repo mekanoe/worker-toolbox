@@ -2037,15 +2037,15 @@
     "@xtuc/long" "4.2.2"
 
 "@worker-toolbox/build-plugin-esbuild@file:packages/build-plugin-esbuild":
-  version "0.0.8"
+  version "0.0.9"
   dependencies:
-    "@worker-toolbox/build-plugin" "^0.0.8"
+    "@worker-toolbox/build-plugin" "^0.0.9"
     esbuild "^0.12.19"
 
 "@worker-toolbox/build-plugin-webpack4@file:packages/build-plugin-webpack4":
-  version "0.0.8"
+  version "0.0.9"
   dependencies:
-    "@worker-toolbox/build-plugin" "^0.0.8"
+    "@worker-toolbox/build-plugin" "^0.0.9"
     chokidar "3.5.2"
     webpack "4.46.0"
 
@@ -8020,10 +8020,10 @@ prelude-ls@~1.1.2:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
   integrity sha1-IZMqVJ9eUv/ZqCf1cOBL5iqX2lQ=
 
-prettier-plugin-organize-imports@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/prettier-plugin-organize-imports/-/prettier-plugin-organize-imports-2.1.0.tgz#5b2e762365b9bd2b25b4460c1f2cb2703b8b78db"
-  integrity sha512-P6TzXkuZRV4g9Fl363tN+r6/ecynu0fwmItKCb/04iksrUtwl/6Jf4DxBPuW8UbcgFRadltxB0VlV5Yh1Ec0Ow==
+prettier-plugin-organize-imports@3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-organize-imports/-/prettier-plugin-organize-imports-3.2.2.tgz#91993365e017daa5d0d28d8183179834224d8dd1"
+  integrity sha512-e97lE6odGSiHonHJMTYC0q0iLXQyw0u5z/PJpvP/3vRy6/Zi9kLBwFAbEGjDzIowpjQv8b+J04PDamoUSQbzGA==
 
 prettier-plugin-pkg@^0.9.0:
   version "0.9.0"
